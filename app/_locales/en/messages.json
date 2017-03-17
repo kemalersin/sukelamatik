@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "sukelamatik",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "EkşiSözlük Şukela Entry Okuyucu",
+    "description": "The description of the application"
+  }
+}
