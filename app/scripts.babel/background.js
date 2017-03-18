@@ -14,7 +14,7 @@ chrome.alarms.onAlarm.addListener(alarm => {
       let topics = $(topicData).find('ul.topic-list.partial > li > a').toArray();
       let topic = topics[Math.floor(Math.random() * topics.length)];
 
-      $.get(`${url}${topic.pathname}?a=nice`)
+      $.get(`${url}${topic.pathname}?a=dailynice`)
         .done(entryData => {
           let title = $(entryData).find('h1#title')[0];
           let entries = $(entryData).find('ul#entry-list > li').toArray();

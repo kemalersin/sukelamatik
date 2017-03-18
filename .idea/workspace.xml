@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="popup.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/popup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -41,18 +41,18 @@
       <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts.babel/background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="33" column="61" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="61" />
+            <state relative-caret-position="231">
+              <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="popup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts.babel/popup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="176">
+              <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -66,10 +66,10 @@
         <option value="$PROJECT_DIR$/app/scripts.babel/contentscript.js" />
         <option value="$PROJECT_DIR$/app/scripts/popup.js" />
         <option value="$PROJECT_DIR$/app/manifest.json" />
-        <option value="$PROJECT_DIR$/app/popup.html" />
         <option value="$PROJECT_DIR$/app/styles.scss/main.scss" />
-        <option value="$PROJECT_DIR$/app/scripts.babel/background.js" />
         <option value="$PROJECT_DIR$/app/scripts.babel/popup.js" />
+        <option value="$PROJECT_DIR$/app/scripts.babel/background.js" />
+        <option value="$PROJECT_DIR$/app/popup.html" />
       </list>
     </option>
   </component>
@@ -293,12 +293,12 @@
       <option name="presentableId" value="Default" />
       <updated>1489747646358</updated>
       <workItem from="1489747647633" duration="11206000" />
-      <workItem from="1489821615160" duration="15575000" />
+      <workItem from="1489821615160" duration="16107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26781000" />
+    <option name="totallyTimeSpent" value="27313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -464,26 +464,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/popup.html">
+    <entry file="file://$PROJECT_DIR$/app/scripts.babel/popup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts.babel/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="33" column="61" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="61" />
+        <state relative-caret-position="231">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts.babel/popup.js">
+    <entry file="file://$PROJECT_DIR$/app/popup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="198">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
