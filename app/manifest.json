@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "__MSG_appName__",
   "version": "0.0.1",
   "manifest_version": 2,
@@ -10,9 +10,11 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "bower_components/jquery/dist/jquery.min.js",
       "scripts/chromereload.js",
       "scripts/background.js"
-    ]
+    ],
+    "persistent": true
   },
   "permissions": [
     "tabs",
@@ -24,8 +26,7 @@
     "*://*.google.com/",
     "notifications",
     "storage",
-    "alarms",
-    "webRequest"
+    "alarms"
   ],
   "options_ui": {
     "page": "options.html",
@@ -38,7 +39,6 @@
         "https://*/*"
       ],
       "js": [
-        "bower_components/jquery/dist/jquery.min.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",

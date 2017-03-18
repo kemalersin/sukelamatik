@@ -1,9 +1,19 @@
-$padding: 20px;
+$padding: 20px 30px 10px;
 
 body {
   padding: $padding;
 }
 
 #popup {
-  min-width: 300px;
+  min-width: 640px;
+
+  #topic {
+    .content {
+      max-height: inherit;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
