@@ -47,7 +47,7 @@
     });
 
   chrome.runtime.onMessage.addListener((msg, sender) => {
-    if (msg.update) {
+    if (msg.updateEntry) {
       $('button.refresh').show();
     }
   });

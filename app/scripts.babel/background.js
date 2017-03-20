@@ -3,6 +3,15 @@
 (function () {
   const url = 'https://eksisozluk.com';
 
+  function setAlarm() {
+    chrome.storage.sync.get({
+        updateFrequency: 1
+      }, result => {
+      chrome.alarms.clear('update');
+      chrome.alarms.create('update', {periodInMinutes: result.updateFrequency})
+    });
+  }
+
   function getEntry() {
     $.get(`${url}/basliklar/gundem`)
       .done(topicData => {
@@ -32,7 +41,7 @@
             chrome.browserAction.setBadgeBackgroundColor({color: '#388e3c'});
             chrome.browserAction.enable();
 
-            chrome.runtime.sendMessage({update: true});
+            chrome.runtime.sendMessage({updateEntry: true});
           })
       })
       .fail(err => {
@@ -42,10 +51,16 @@
   }
 
   chrome.runtime.onInstalled.addListener(details => {
-    getEntry();
-
     chrome.browserAction.disable();
-    chrome.alarms.create('update', {periodInMinutes: 0.1});
     chrome.alarms.onAlarm.addListener(alarm => getEntry());
+
+    setAlarm();
+    getEntry();
+  });
+
+  chrome.runtime.onMessage.addListener((msg, sender) => {
+    if (msg.updateAlarm) {
+      setAlarm();
+    }
   });
 }());

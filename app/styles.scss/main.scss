@@ -1,20 +1,22 @@
-#popup {
+body {
   min-width: 645px;
   max-width: 645px;
-  padding: 40px 30px 10px;
+  line-height: 1 !important;
+}
 
-  #topic {
-    .content {
-      max-height: inherit;
+#popup {
+  body {
+    padding: 40px 30px 10px;
+
+    #topic {
+      .content {
+        max-height: inherit;
+      }
     }
-  }
 
-  footer {
-    padding-top: 20px;
-  }
-
-  a:hover {
-    text-decoration: underline;
+    footer {
+      padding-top: 20px;
+    }
   }
 }
 
@@ -23,8 +25,40 @@
   overflow: hidden;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 8px !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  background-image: none !important;
+
+  &.primary {
+    &:focus {
+      color: white !important;
+      background-color: #66b822 !important;
+      border-color: #53a245 !important;
+    }
+
+    &:hover {
+      color: white !important;
+      background-color: #4e8d1a !important;
+      border-color: #3d7733 !important;
+    }
+  }
+}
+
 .edittools {
   position: absolute;
   right: 5px;
   top: 5px;
+}
+
+input[type='text'],
+input[type='number'] {
+  padding: 8px !important;
+  border-radius: 2px !important;
+  border: 1px solid #a6a6a7 !important;
 }
