@@ -1,7 +1,6 @@
 body {
   min-width: 645px;
   max-width: 645px;
-  line-height: 1 !important;
 }
 
 #popup {
@@ -29,23 +28,25 @@ a:hover {
   text-decoration: underline;
 }
 
-button {
-  padding: 8px !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-  background-image: none !important;
+.actions {
+  button {
+    padding: 6px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
 
-  &.primary {
-    &:focus {
-      color: white !important;
-      background-color: #66b822 !important;
-      border-color: #53a245 !important;
-    }
+    &.primary {
+      &:focus {
+        color: white !important;
+        background-color: #66b822 !important;
+        border-color: #53a245 !important;
+      }
 
-    &:hover {
-      color: white !important;
-      background-color: #4e8d1a !important;
-      border-color: #3d7733 !important;
+      &:hover {
+        color: white !important;
+        background-color: #4e8d1a !important;
+        border-color: #3d7733 !important;
+      }
     }
   }
 }
@@ -58,7 +59,7 @@ button {
 
 input[type='text'],
 input[type='number'] {
-  padding: 8px !important;
+  padding: 6px !important;
   border-radius: 2px !important;
   border: 1px solid #a6a6a7 !important;
 }
