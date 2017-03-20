@@ -1,11 +1,7 @@
-$padding: 20px 30px 10px;
-
-body {
-  padding: $padding;
-}
-
 #popup {
-  min-width: 640px;
+  min-width: 645px;
+  max-width: 645px;
+  padding: 40px 30px 10px;
 
   #topic {
     .content {
@@ -13,7 +9,22 @@ body {
     }
   }
 
+  footer {
+    padding-top: 20px;
+  }
+
   a:hover {
     text-decoration: underline;
   }
+}
+
+#options {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.edittools {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
