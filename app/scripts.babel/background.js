@@ -1,14 +1,12 @@
 'use strict';
 
+const url = 'https://eksisozluk.com';
+
 chrome.runtime.onInstalled.addListener(details => {
-  console.log('previousVersion', details.previousVersion);
+  chrome.alarms.create('update', {periodInMinutes: 0.1});
 });
 
-chrome.alarms.create('update', {periodInMinutes: 0.1});
-
 chrome.alarms.onAlarm.addListener(alarm => {
-  const url = 'https://eksisozluk.com';
-
   $.get(`${url}/basliklar/gundem`)
     .done(topicData => {
       let topics = $(topicData).find('ul.topic-list.partial > li > a').toArray();
@@ -21,13 +19,14 @@ chrome.alarms.onAlarm.addListener(alarm => {
           let entry = entries[Math.floor(Math.random() * entries.length)];
 
           let entryObject = {
-            title: title.outerHTML,
-            html: entry.outerHTML,
             id: $(entry).data('id'),
             author: $(entry).data('author'),
             authorId: $(entry).data('author-id'),
             favoriteCount: $(entry).data('favorite-count'),
-            date: $(entry).find('footer > .info > a.entry-date').text()
+            date: $(entry).find('footer > .info > a.entry-date').text(),
+
+            titleHTML: title.outerHTML,
+            entryHTML: entry.outerHTML
           };
 
           chrome.storage.local.set({'entry': entryObject});

@@ -6,8 +6,21 @@ chrome.storage.local.get('entry', result => {
   let entry = result.entry;
 
   $('#entry-list')
-    .append(entry.html)
-    .before(entry.title);
+    .before(entry.titleHTML)
+    .append(entry.entryHTML);
 
+  $('body').on('click', 'a', (event) => {
+    let el = event.currentTarget;
 
+    if ($(el).hasClass('url')) {
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    chrome.tabs.create({
+      url: `https://eksisozluk.com${el.pathname}${el.search}`
+    });
+  });
 });
