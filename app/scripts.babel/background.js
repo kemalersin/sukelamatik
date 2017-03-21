@@ -5,21 +5,36 @@
 
   function setAlarm() {
     chrome.storage.sync.get({
-        updateFrequency: 1
+        updateFrequency: 5
       }, result => {
       chrome.alarms.clear('update');
       chrome.alarms.create('update', {periodInMinutes: result.updateFrequency})
     });
   }
 
+  function get(url) {
+    return new Promise((resolve, reject) => {
+      let xhr = new XMLHttpRequest();
+
+      xhr.open('GET', url);
+
+      xhr.onload = () =>
+        xhr.status === 200 ?
+          resolve(xhr.responseText) :
+          reject(xhr.status);
+
+      xhr.send();
+    });
+  }
+
   function getEntry() {
-    $.get(`${url}/basliklar/gundem`)
-      .done(topicData => {
+    get(`${url}/basliklar/gundem`)
+      .then(topicData => {
         let topics = $(topicData).find('ul.topic-list.partial > li > a').toArray();
         let topic = topics[Math.floor(Math.random() * topics.length)];
 
-        $.get(`${url}${topic.pathname}?a=dailynice`)
-          .done(entryData => {
+        get(`${url}${topic.pathname}?a=dailynice`)
+          .then(entryData => {
             let title = $(entryData).find('h1#title')[0];
             let entries = $(entryData).find('ul#entry-list > li').toArray();
             let entry = entries[Math.floor(Math.random() * entries.length)];
@@ -37,8 +52,8 @@
 
             chrome.storage.local.set({'entry': entryObject});
 
-            chrome.browserAction.setBadgeText({text: 'Yeni!'});
-            chrome.browserAction.setBadgeBackgroundColor({color: '#388e3c'});
+            chrome.browserAction.setBadgeText({text: 'yeni!'});
+            chrome.browserAction.setBadgeBackgroundColor({color: '#80c14b'});
             chrome.browserAction.enable();
 
             chrome.runtime.sendMessage({updateEntry: true});

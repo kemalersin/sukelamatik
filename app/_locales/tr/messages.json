@@ -1,10 +1,10 @@
 {
   "appName": {
     "message": "şükelamatik",
-    "description": "şükelamatik"
+    "description": "Eklenti adı."
   },
   "appDescription": {
     "message": "ekşi sözlük şükela entry okuyucu",
-    "description": "ekşi sözlük şükela entry okuyucu"
+    "description": "Eklenti açıklaması."
   }
 }

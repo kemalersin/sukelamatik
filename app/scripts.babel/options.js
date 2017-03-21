@@ -13,7 +13,7 @@
   });
 
   chrome.storage.sync.get({
-    updateFrequency: 1
+    updateFrequency: 5
   }, result =>
     $('#UpdateFrequency').val(result.updateFrequency)
   );
