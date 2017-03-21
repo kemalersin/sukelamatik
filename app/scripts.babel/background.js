@@ -12,29 +12,14 @@
     });
   }
 
-  function get(url) {
-    return new Promise((resolve, reject) => {
-      let xhr = new XMLHttpRequest();
-
-      xhr.open('GET', url);
-
-      xhr.onload = () =>
-        xhr.status === 200 ?
-          resolve(xhr.responseText) :
-          reject(xhr.status);
-
-      xhr.send();
-    });
-  }
-
   function getEntry() {
-    get(`${url}/basliklar/gundem`)
-      .then(topicData => {
+    $.get(`${url}/basliklar/gundem`)
+      .done(topicData => {
         let topics = $(topicData).find('ul.topic-list.partial > li > a').toArray();
         let topic = topics[Math.floor(Math.random() * topics.length)];
 
-        get(`${url}${topic.pathname}?a=dailynice`)
-          .then(entryData => {
+        $.get(`${url}${topic.pathname}?a=dailynice`)
+          .done(entryData => {
             let title = $(entryData).find('h1#title')[0];
             let entries = $(entryData).find('ul#entry-list > li').toArray();
             let entry = entries[Math.floor(Math.random() * entries.length)];

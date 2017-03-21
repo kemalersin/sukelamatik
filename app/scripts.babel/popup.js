@@ -22,7 +22,7 @@
       $('#title').remove();
 
       $('#entry-list')
-        .html('')
+        .empty()
         .before(entry.titleHTML)
         .append(entry.entryHTML);
     });
